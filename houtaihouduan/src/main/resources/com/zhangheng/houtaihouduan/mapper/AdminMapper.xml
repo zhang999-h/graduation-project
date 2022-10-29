@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhangheng.houtaihouduan.mapper.AdminMapper">
+    <!--public Admin findAdminByNumAndPwd(String num,String password);-->
+    <select id="findAdminByNumAndPwd" resultType="com.zhangheng.houtaihouduan.bean.Admin">
+        select * from  admin where num=#{num} and password=#{password}
+    </select>
+
+</mapper>

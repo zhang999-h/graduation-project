@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhangheng.houtaihouduan.mapper.CheckerMapper">
+
+    <!--    public Checker searchOne(Checker checker);-->
+    <select id="searchOne" resultType="com.zhangheng.houtaihouduan.bean.Checker">
+        select * from  checker where num=#{num} and password=#{password}
+    </select>
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhangheng.houtaihouduan.mapper.ApplicationMapper">
+    <!--public int selStateCount(int state);-->
+    <select id="selStateCount" resultType="int">
+        select COUNT(*) from  application where state =#{state}
+    </select>
+<!--    public List<Application> getByTeacherId(int id);-->
+    <select id="getByTeacherId" resultType="com.zhangheng.houtaihouduan.bean.Application">
+        select * from  application where teacherId =#{id} ORDER BY application.appTime DESC
+    </select>
+</mapper>
